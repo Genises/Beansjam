@@ -1,19 +1,10 @@
 {
-    "id": "06afde79-a34e-4e15-9ec1-8d737ce5aaac",
+    "id": "9daa3198-d82c-46c1-948c-e8bd5e6a94c4",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_laser",
+    "name": "obj_laser3",
     "eventList": [
-        {
-            "id": "ada7a90b-0a20-4503-ae82-b7c7d6e2c61a",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "06afde79-a34e-4e15-9ec1-8d737ce5aaac"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
@@ -31,6 +22,6 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "solid": false,
-    "spriteId": "5295292c-87a6-4965-82ee-04232853d3b3",
+    "spriteId": "d15422bb-0afc-4a47-bffb-44642f0da333",
     "visible": true
 }

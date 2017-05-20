@@ -34,7 +34,7 @@
             "Key": "06afde79-a34e-4e15-9ec1-8d737ce5aaac",
             "Value": {
                 "id": "6e94ac1a-4cd6-48ee-81a2-ddc4aefc08e8",
-                "resourcePath": "objects\\obj_laser\\obj_laser.yy",
+                "resourcePath": "objects\\obj_laser1\\obj_laser1.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -122,7 +122,7 @@
             "Key": "5295292c-87a6-4965-82ee-04232853d3b3",
             "Value": {
                 "id": "07c4f22e-4b94-4a65-b6f3-2e889579a309",
-                "resourcePath": "sprites\\spr_laser\\spr_laser.yy",
+                "resourcePath": "sprites\\spr_laser1\\spr_laser1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -132,6 +132,14 @@
                 "id": "2046538a-a8f1-4410-8c10-096ea04898a0",
                 "resourcePath": "views\\53c6d570-1de0-411d-aed9-f9426e93d389.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "56537ec4-9aff-4ca4-ba81-2e5ff3c53ed0",
+            "Value": {
+                "id": "961ca5fb-af28-4d1d-bb89-28e266e909ec",
+                "resourcePath": "sprites\\spr_laser2\\spr_laser2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -147,6 +155,30 @@
             "Value": {
                 "id": "62879634-aafe-4434-a258-b71b6defcd93",
                 "resourcePath": "views\\5ea1a717-17f2-43db-a177-9078d81b4835.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "619f1884-4161-4999-9df3-3f4b39ae6a08",
+            "Value": {
+                "id": "8ea663e3-1e6a-4dc3-ab61-49699cb5712d",
+                "resourcePath": "objects\\obj_laser4\\obj_laser4.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6d4b6265-7f6b-4194-90a0-cf1800ec94aa",
+            "Value": {
+                "id": "3fdc5036-9883-4006-bc99-9dfa9d4573f7",
+                "resourcePath": "sprites\\spr_laser4\\spr_laser4.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6d968938-2e90-496f-b558-fa5092e56f7f",
+            "Value": {
+                "id": "469be277-26f9-4149-a793-acb7bf4096a2",
+                "resourcePath": "views\\6d968938-2e90-496f-b558-fa5092e56f7f.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -175,11 +207,35 @@
             }
         },
         {
+            "Key": "7e81db4e-560d-4bd9-8501-b4738b0b60f2",
+            "Value": {
+                "id": "a1e5c578-36f8-464f-9275-1537c7600bff",
+                "resourcePath": "objects\\obj_laser2\\obj_laser2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "83c023da-9e80-4e21-9a15-e6554c0f99a7",
+            "Value": {
+                "id": "911d6926-8eee-4ac1-b9e3-51f572562594",
+                "resourcePath": "sprites\\spr_playerMafia\\spr_playerMafia.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9b45c119-91a5-47d7-a530-4665674dcc3c",
             "Value": {
                 "id": "58742d47-793e-4b17-9bac-12bf286b3f4c",
                 "resourcePath": "views\\9b45c119-91a5-47d7-a530-4665674dcc3c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9daa3198-d82c-46c1-948c-e8bd5e6a94c4",
+            "Value": {
+                "id": "f1ce837d-d093-4225-a3f1-64e174dd4884",
+                "resourcePath": "objects\\obj_laser3\\obj_laser3.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -212,6 +268,14 @@
                 "id": "a856801a-c31e-4152-bf8b-dbcb6b97be6f",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "d15422bb-0afc-4a47-bffb-44642f0da333",
+            "Value": {
+                "id": "d1e9a2ef-e4d2-4f5b-ae02-92302e189ca1",
+                "resourcePath": "sprites\\spr_laser3\\spr_laser3.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

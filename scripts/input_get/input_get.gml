@@ -60,15 +60,52 @@ if(gamepad_is_connected(dvc)){
 	
 	if (fire && rate < 1)
 	{
-		with (instance_create_layer(x, y,"Projectiles" ,obj_laser))
-		{
-			speed = 10;
-			direction = other.image_angle;
-			image_angle = direction;
+		switch(attack){
+			case 0:
+			break;
+			case 1:
+				with (instance_create_layer(x, y,"Projectiles" ,obj_laser1))
+				{
+					speed = 20;
+					direction = other.image_angle;
+					image_angle = direction;
+				}
+				fire = false;
+				alarm[0] = max(5, (room_speed * rate));
+			break;
+			case 2:
+				with (instance_create_layer(x, y,"Projectiles" ,obj_laser2))
+				{
+					speed = 20;
+					direction = other.image_angle;
+					image_angle = direction;
+				}
+				fire = false;
+				alarm[0] = max(5, (room_speed * rate * 2));
+			break;
+			case 3:
+			with (instance_create_layer(x, y,"Projectiles" ,obj_laser3))
+				{
+					speed = 20;
+					direction = other.image_angle;
+					image_angle = direction;
+				}
+				fire = false;
+				alarm[0] = max(5, (room_speed * rate * 3));
+			break;
+			case 4:
+			with (instance_create_layer(x, y,"Projectiles" ,obj_laser4))
+				{
+					speed = 20;
+					direction = other.image_angle;
+					image_angle = direction;
+				}
+				fire = false;
+				alarm[0] = max(5, (room_speed * rate * 4));
+			break;
 		}
-	fire = false;
-	alarm[0] = max(5, (room_speed * rate));
 	}
+	
 	
 	
 	
