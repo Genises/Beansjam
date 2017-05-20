@@ -12,8 +12,8 @@ draw_text(x,y+40,"movement " + string(movement));
 draw_text(x,y+60,"attack " + string(attack));
 draw_text(x,y+80,"defense " + string(defense));
 draw_text(x,y+100,"nothing " + string(nothing));
-draw_text(x,y+140,"id " + string(id));
-draw_text(x,y+160,"id " + string(speed));
+draw_text(x,y+140,"id " + string(myID));
+draw_text(x,y+160,"speed " + string(speed));
 
 /*
 if(fire){

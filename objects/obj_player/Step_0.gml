@@ -1,4 +1,4 @@
-input_get(id%4);
+input_get(myID);
 
 //if(fire){
 //	instance_create_layer(x,y,"Projektiles",obj_laser);
