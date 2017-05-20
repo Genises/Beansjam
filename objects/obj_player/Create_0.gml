@@ -7,7 +7,7 @@ array_shield[0] = 0;
 array_shield[1] = 1; 
 array_shield[2] = 2; 
 array_shield[3] = 4; 
-array_shield[8] = 8; 
+array_shield[4] = 10; 
 
 array_boost = array_create(5, noone);
 array_boost[0] = spr_boost0;
