@@ -458,7 +458,7 @@
             "Key": "ffa3e2b7-65b3-4118-ad0c-4e2369b45536",
             "Value": {
                 "id": "a4be2871-8c1d-4f46-8a67-23249c30dd69",
-                "resourcePath": "objects\\obj_button\\obj_button.yy",
+                "resourcePath": "objects\\obj_text_button\\obj_text_button.yy",
                 "resourceType": "GMObject"
             }
         }
