@@ -1,13 +1,11 @@
-middlew = room_width/2;
-middleh = room_height/2;
 
 
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
 draw_set_alpha(1);
-draw_set_font(fnt_super);
+draw_set_font(fnt_super_28);
 
-if (point_in_rectangle(mouse_x, mouse_y, 0, middleh+100-12, room_width, middleh+100+8))
+if (point_in_rectangle(mouse_x, mouse_y, 0, middleh+offs1-24, room_width, middleh+offs1+8))
 {
 	draw_set_color(c_white);
 	hoveringm = 1;
@@ -19,10 +17,10 @@ else
 }
 if (hoveringc == 0)
 {
-	draw_text(middlew, middleh+100, "Start");
+	draw_text(middlew, middleh+offs1, "Start");
 }
 
-if (point_in_rectangle(mouse_x, mouse_y, 0, middleh+130-12, room_width, middleh+130+8))
+if (point_in_rectangle(mouse_x, mouse_y, 0, middleh+offs2-24, room_width, middleh+offs2+8))
 {
 	draw_set_color(c_white);
 	hoveringm = 2;
@@ -34,10 +32,10 @@ else
 }
 if (hoveringc == 0)
 {
-	draw_text(middlew, middleh+130, "Options");
+	draw_text(middlew, middleh+offs2, "Options");
 }
 
-if (point_in_rectangle(mouse_x, mouse_y, 0, middleh+160-12, room_width, middleh+160+8))
+if (point_in_rectangle(mouse_x, mouse_y, 0, middleh+offs3-24, room_width, middleh+offs3+8))
 {
 	draw_set_color(c_white);
 	hoveringm = 3;
@@ -49,10 +47,10 @@ else
 }
 if (hoveringc == 0)
 {
-	draw_text(middlew, middleh+160, "Credits");
+	draw_text(middlew, middleh+offs3, "Credits");
 }
 
-if (point_in_rectangle(mouse_x, mouse_y, 0, middleh+190-12, room_width, middleh+190+8))
+if (point_in_rectangle(mouse_x, mouse_y, 0, middleh+offs4-24, room_width, middleh+offs4+8))
 {
 	draw_set_color(c_white);
 	hoveringm = 4;
@@ -64,7 +62,7 @@ else
 }
 if (hoveringc == 0)
 {
-	draw_text(middlew, middleh+190, "Exit");
+	draw_text(middlew, middleh+offs4, "Exit");
 }
 
 if (hoveringc > 0)
@@ -77,7 +75,7 @@ if (hoveringc > 0)
 	{
 		draw_set_color(c_gray);
 	}
-	draw_text(middlew, middleh+100, "Start");
+	draw_text(middlew, middleh+offs1, "Start");
 	
 	if (hoveringc == 2)
 	{
@@ -87,7 +85,7 @@ if (hoveringc > 0)
 	{
 		draw_set_color(c_gray);
 	}
-	draw_text(middlew, middleh+130, "Options");
+	draw_text(middlew, middleh+offs2, "Options");
 	
 	if (hoveringc == 3)
 	{
@@ -97,7 +95,7 @@ if (hoveringc > 0)
 	{
 		draw_set_color(c_gray);
 	}
-	draw_text(middlew, middleh+160, "Credits");
+	draw_text(middlew, middleh+offs3, "Credits");
 	
 	if (hoveringc == 4)
 	{
@@ -107,42 +105,6 @@ if (hoveringc > 0)
 	{
 		draw_set_color(c_gray);
 	}
-	draw_text(middlew, middleh+190, "Exit");
+	draw_text(middlew, middleh+offs4, "Exit");
 	
-}
-
-if (mouse_check_button_pressed(mb_left) && hoveringm > 0)
-{
-	switch (hoveringm)
-	{
-		case 1:
-			room_goto(roo_game);
-			break;
-		case 2:
-			break;
-		case 3:
-			room_goto(roo_credits);
-			break;
-		case 4: 
-			game_end();
-			break;
-	}
-}
-
-if (gamepad_button_check_pressed(0, gp_face1) && hoveringc > 0)
-{
-	switch (hoveringc)
-	{
-		case 1:
-			room_goto(roo_game);
-			break;
-		case 2:
-			break;
-		case 3:
-			room_goto(roo_credits);
-			break;
-		case 4: 
-			game_end();
-			break;
-	}
 }
