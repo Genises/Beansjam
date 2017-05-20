@@ -1,22 +1,22 @@
 {
-    "id": "9daa3198-d82c-46c1-948c-e8bd5e6a94c4",
+    "id": "50a48c70-e62d-45dc-9069-7630ea4593f8",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_laser3",
+    "name": "obj_bullet",
     "eventList": [
         {
-            "id": "4106eac9-93e1-43dd-897b-6c21826a6c4f",
+            "id": "6ee83eb2-ba55-4c39-9ddb-a9cb4ecb3747",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "collisionObjectId": "1f9323f1-dfda-4e29-8ead-071cc2b878f4",
             "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "9daa3198-d82c-46c1-948c-e8bd5e6a94c4"
+            "eventtype": 4,
+            "m_owner": "50a48c70-e62d-45dc-9069-7630ea4593f8"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "parentObjectId": "50a48c70-e62d-45dc-9069-7630ea4593f8",
+    "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -31,6 +31,6 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "solid": false,
-    "spriteId": "d15422bb-0afc-4a47-bffb-44642f0da333",
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
 }

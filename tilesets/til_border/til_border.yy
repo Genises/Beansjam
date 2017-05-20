@@ -4,7 +4,31 @@
     "mvc": "1.11",
     "name": "til_border",
     "auto_tile_sets": [
-        
+        {
+            "id": "6bbe6d0c-4dd6-4f87-97ae-e86067b4417d",
+            "modelName": "GMAutoTileSet",
+            "mvc": "1.0",
+            "closed_edge": false,
+            "name": "autotile_1",
+            "tiles": [
+                0,
+                7,
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        }
     ],
     "macroPageTiles": {
         "SerialiseData": null,
@@ -14,7 +38,7 @@
             
         ]
     },
-    "out_columns": 3,
+    "out_columns": 5,
     "out_tilehborder": 2,
     "out_tilevborder": 2,
     "spriteId": "fe5c75e6-74ff-426a-b9dd-8930355163af",
@@ -34,7 +58,16 @@
             8,
             9,
             10,
-            11
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
         ],
         "SerialiseFrameCount": 1
     },
@@ -42,11 +75,11 @@
         
     ],
     "tile_animation_speed": 15,
-    "tile_count": 12,
+    "tile_count": 21,
     "tileheight": 95,
     "tilehsep": 0,
     "tilevsep": 0,
-    "tilewidth": 230,
+    "tilewidth": 95,
     "tilexoff": 0,
     "tileyoff": 0
 }

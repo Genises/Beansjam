@@ -69,6 +69,7 @@ if(gamepad_is_connected(dvc)){
 					speed = 20;
 					direction = other.image_angle;
 					image_angle = direction;
+					bulletID = id;
 				}
 				fire = false;
 				alarm[0] = max(10, (room_speed/10 * rate));
@@ -79,6 +80,7 @@ if(gamepad_is_connected(dvc)){
 					speed = 20;
 					direction = other.image_angle;
 					image_angle = direction;
+					bulletID = id;
 				}
 				fire = false;
 				alarm[0] = max(20, (room_speed/10 * rate * 2));
@@ -89,6 +91,7 @@ if(gamepad_is_connected(dvc)){
 					speed = 20;
 					direction = other.image_angle;
 					image_angle = direction;
+					bulletID = id;
 				}
 				fire = false;
 				alarm[0] = max(40, (room_speed/10 * rate * 3));
@@ -99,6 +102,7 @@ if(gamepad_is_connected(dvc)){
 					speed = 20;
 					direction = other.image_angle;
 					image_angle = direction;
+					bulletID = id;
 				}
 				fire = false;
 				alarm[0] = max(60, (room_speed/10 * rate * 4));
@@ -106,15 +110,20 @@ if(gamepad_is_connected(dvc)){
 		}
 	}
 
-    gamepad_set_axis_deadzone(dvc, 0.1);	
+    gamepad_set_axis_deadzone(dvc, 0.3);	
 	var xx = gamepad_axis_value(dvc, gp_axislh);
 	var yy = gamepad_axis_value(dvc, gp_axislv);	
 //Rotate
-	if((xx != 0) || yy != 0){
-		var pdir = point_direction(0,0,xx,yy)
-		var dif = angle_difference(pdir, image_angle);
-		image_angle += median(-2*movement, dif, 2*movement);
+//	if((xx != 0) || yy != 0){
+//		var pdir = point_direction(0,0,xx,yy)
+//		var dif = angle_difference(pdir, image_angle);
+//		image_angle += median(-2*movement, dif, 2*movement);
+//	}
+//Alt. Rotate
+	if((xx != 0)){
+		image_angle += -xx*movement;
 	}
+	
 //Move
 	var movementSpeed = movement * 4;
 	var l_trig = gamepad_button_value(dvc, gp_shoulderlb)
