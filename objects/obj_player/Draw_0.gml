@@ -1,5 +1,10 @@
+if(boost){
+//draw_sprite_ext(array_boost[movement],0,x-72,y,1,1,image_angle,-1,1);
+draw_sprite_ext(array_boost[movement],0,x - lengthdir_x(72, image_angle),y - lengthdir_y(72, image_angle),1,1,image_angle,-1,1);
+}
+
 draw_self();
-draw_sprite(spr_playerMafia,0,x,y)
+draw_sprite(spr_playerMafia,0,x,y);
 
 
 draw_set_colour(c_white);
@@ -9,6 +14,7 @@ draw_text(x,y+80,"defense " + string(defense));
 draw_text(x,y+100,"nothing " + string(nothing));
 draw_text(x,y+140,"id " + string(id));
 draw_text(x,y+160,"id " + string(speed));
+
 /*
 if(fire){
 	var len = 0;

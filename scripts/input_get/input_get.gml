@@ -124,13 +124,17 @@ if(gamepad_is_connected(dvc)){
 		if(speed >= movementSpeed){
 			motion_set(image_angle,movementSpeed);
 		}
-		
 	} else {
 		if(speed > 0.1){
-			speed *= 0.95;
+			speed *= 0.97;
 		} else {
 			speed = 0;
 		}
+	}
+	if(l_trig > 0){
+		boost = true;
+	} else {
+		boost = false;
 	}
 }
 
