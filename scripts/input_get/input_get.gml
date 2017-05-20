@@ -1,4 +1,4 @@
-///input_get(device)
+///input_get(device,id)
 
 dvc = argument0;
 
@@ -69,7 +69,7 @@ if(gamepad_is_connected(dvc)){
 					speed = 20;
 					direction = other.image_angle;
 					image_angle = direction;
-					bulletID = id;
+					bulletID = other.myID;
 				}
 				fire = false;
 				alarm[0] = max(10, (room_speed/10 * rate));
@@ -80,7 +80,7 @@ if(gamepad_is_connected(dvc)){
 					speed = 20;
 					direction = other.image_angle;
 					image_angle = direction;
-					bulletID = id;
+					bulletID = other.myID;
 				}
 				fire = false;
 				alarm[0] = max(20, (room_speed/10 * rate * 2));
@@ -91,7 +91,7 @@ if(gamepad_is_connected(dvc)){
 					speed = 20;
 					direction = other.image_angle;
 					image_angle = direction;
-					bulletID = id;
+					bulletID = other.myID;
 				}
 				fire = false;
 				alarm[0] = max(40, (room_speed/10 * rate * 3));
@@ -102,7 +102,7 @@ if(gamepad_is_connected(dvc)){
 					speed = 20;
 					direction = other.image_angle;
 					image_angle = direction;
-					bulletID = id;
+					bulletID = other.myID;
 				}
 				fire = false;
 				alarm[0] = max(60, (room_speed/10 * rate * 4));
