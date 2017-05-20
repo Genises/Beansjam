@@ -7,6 +7,7 @@ draw_text(x,y+80,"defense " + string(defense));
 draw_text(x,y+100,"nothing " + string(nothing));
 draw_text(x,y+140,"id " + string(id));
 
+/*
 if(fire){
 	var len = 0;
 	var maxlen = 100;
@@ -15,5 +16,6 @@ if(fire){
 		len += 4;
 	}
 }
+*/
 
 

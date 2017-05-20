@@ -1,1 +1,1 @@
-fire = false;
+fire = true;

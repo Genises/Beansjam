@@ -1,6 +1,6 @@
 life = 10;
 lastbutton = ""; 
-fire = false;
+fire = true;
 
 
 //A

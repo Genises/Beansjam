@@ -51,20 +51,44 @@ if(gamepad_is_connected(dvc)){
 	}
 
 //Fire
-	if(gamepad_button_check_pressed(dvc,gp_shoulderr)&& fire != true){
-		fire = true;
+//	if(gamepad_button_check_pressed(dvc,gp_shoulderr)&& fire != true){
+//		fire = true;
+//	}
+	
+	var r_trig = gamepad_button_value(dvc, gp_shoulderrb);
+	var rate = 1 - r_trig;
+	
+	if (fire && rate < 1)
+	{
+		with (instance_create_layer(x, y,"Projectiles" ,obj_laser))
+		{
+			speed = 10;
+			direction = other.image_angle;
+			image_angle = direction;
+		}
+	fire = false;
+	alarm[0] = max(5, (room_speed * rate));
 	}
 	
 	
-//Rotate
-
-    gamepad_set_axis_deadzone(dvc, 0.1);
+	
+	
+	
 	var xx = gamepad_axis_value(dvc, gp_axislh);
-	var yy = gamepad_axis_value(dvc, gp_axislv);
+	var yy = gamepad_axis_value(dvc, gp_axislv);		
+//Rotate
+    gamepad_set_axis_deadzone(dvc, 0.1);
 	if((xx != 0) || yy != 0){
 		var pdir = point_direction(0,0,xx,yy)
 		var dif = angle_difference(pdir, image_angle);
 		image_angle += median(-20, dif, 20);
+	}
+	
+//Move
+	if ((xx != 0) || (yy != 0))
+	{
+		x += xx * 4;
+		y += yy * 4;
 	}
 }
 
