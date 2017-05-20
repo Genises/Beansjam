@@ -57,16 +57,21 @@ if(gamepad_is_connected(dvc)){
 	
 	var r_trig = gamepad_button_value(dvc, gp_shoulderrb);
 	var rate = r_trig;
+	var dir = point_direction(x,y,x + lengthdir_x(10, image_angle),y + lengthdir_y(10, image_angle));
 	
+	var xxx = x + lengthdir_x(72, image_angle);
+	var yyy = y + lengthdir_y(72, image_angle);
+	
+
 	if (fire && rate > 0)
 	{
 		switch(attack){
 			case 0:
 			break;
 			case 1:
-				with (instance_create_layer(x, y,"Projectiles" ,obj_laser1))
+				with (instance_create_layer(xxx, yyy,"Projectiles" ,obj_laser1))
 				{
-					speed = 20;
+					physics_apply_impulse(x,y,lengthdir_x(100,dir),lengthdir_y(100,dir));
 					direction = other.image_angle;
 					image_angle = direction;
 					bulletID = other.myID;
@@ -113,23 +118,34 @@ if(gamepad_is_connected(dvc)){
     gamepad_set_axis_deadzone(dvc, 0.3);	
 	var xx = gamepad_axis_value(dvc, gp_axislh);
 	var yy = gamepad_axis_value(dvc, gp_axislv);	
-//Rotate
-//	if((xx != 0) || yy != 0){
-//		var pdir = point_direction(0,0,xx,yy)
-//		var dif = angle_difference(pdir, image_angle);
-//		image_angle += median(-2*movement, dif, 2*movement);
-//	}
-//Alt. Rotate
-	if((xx != 0)){
-		image_angle += -xx*movement;
+
+/*Rotate
+	if((xx != 0) || yy != 0){
+		var pdir = point_direction(0,0,xx,yy)
+		var dif = angle_difference(pdir, image_angle);
+		image_angle += median(-2*movement, dif, 2*movement);
 	}
+	Alt. Rotate
+
+*/	
+
+if((xx != 0)){
+	phy_rotation += xx*movement;
+}
 	
 //Move
 	var movementSpeed = movement * 4;
-	var l_trig = gamepad_button_value(dvc, gp_shoulderlb)
-	if (l_trig > 0 && !(speed > movementSpeed))
+	var l_trig = gamepad_button_value(dvc, gp_shoulderlb);
+
+	if (l_trig > 0.1 && !(phy_speed > movementSpeed))
 	{
-		motion_add(image_angle,l_trig*movementSpeed);
+		forward_x = lengthdir_x(2000, -phy_rotation)* l_trig * movementSpeed;
+		forward_y = lengthdir_y(2000, -phy_rotation)* l_trig * movementSpeed;
+		
+		physics_apply_force(x,y,forward_x,forward_y);
+	}
+
+	/*	motion_add(image_angle,l_trig*movementSpeed);
 		if(speed >= movementSpeed){
 			motion_set(image_angle,movementSpeed);
 		}
@@ -140,6 +156,8 @@ if(gamepad_is_connected(dvc)){
 			speed = 0;
 		}
 	}
+	*/
+	
 	if(l_trig > 0){
 		boost = true;
 	} else {
