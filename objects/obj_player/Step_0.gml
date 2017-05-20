@@ -6,3 +6,7 @@ input_get(myID);
 //}
 
 movementSpeed = movement*10;
+
+if(life <= 0){
+	instance_destroy();
+}

@@ -1,2 +1,2 @@
-damage = 3;
+damage = 4;
 bulletID = 0;
