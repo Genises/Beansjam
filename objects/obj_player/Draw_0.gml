@@ -1,4 +1,6 @@
 draw_self();
+draw_sprite(spr_playerMafia,0,x,y)
+
 
 draw_set_colour(c_white);
 draw_text(x,y+40,"movement " + string(movement));
@@ -6,7 +8,7 @@ draw_text(x,y+60,"attack " + string(attack));
 draw_text(x,y+80,"defense " + string(defense));
 draw_text(x,y+100,"nothing " + string(nothing));
 draw_text(x,y+140,"id " + string(id));
-
+draw_text(x,y+160,"id " + string(speed));
 /*
 if(fire){
 	var len = 0;
